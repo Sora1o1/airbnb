@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../providers/property_provider.dart';
 import '../widgets/category_item.dart';
 import '../widgets/property_card.dart';
+import '../widgets/filter_bottom_sheet.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -84,14 +85,16 @@ class _HomeScreenState extends State<HomeScreen> {
                             color: Colors.grey[100],
                             borderRadius: BorderRadius.circular(24),
                           ),
-                          child: InkWell(
-                            onTap: () {
-                              context
-                                  .read<PropertyProvider>()
-                                  .showFilterDialog(context);
+                          child: IconButton(
+                            icon: const Icon(Icons.tune),
+                            onPressed: () {
+                              showModalBottomSheet(
+                                context: context,
+                                isScrollControlled: true,
+                                backgroundColor: Colors.transparent,
+                                builder: (context) => const FilterBottomSheet(),
+                              );
                             },
-                            child:
-                                const Icon(Icons.tune, color: Colors.black87),
                           ),
                         ),
                       ],

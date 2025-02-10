@@ -224,11 +224,10 @@ class _PropertyCardState extends State<PropertyCard> {
                               Expanded(
                                 child: Text(
                                   widget.property.location,
-                                  style:  GoogleFonts.poppins(
+                                  style: GoogleFonts.poppins(
                                     fontSize: 18,
                                     color: Colors.grey.shade900,
                                     fontWeight: FontWeight.w600,
-
                                   ),
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
@@ -257,7 +256,6 @@ class _PropertyCardState extends State<PropertyCard> {
                               fontSize: 14,
                               color: Colors.grey.shade500,
                               fontWeight: FontWeight.w500,
-
                             ),
                           ),
                           const Spacer(),
@@ -267,20 +265,18 @@ class _PropertyCardState extends State<PropertyCard> {
                             children: [
                               Text(
                                 '\$${widget.property.price.toStringAsFixed(0)}',
-                                style:  GoogleFonts.poppins(
+                                style: GoogleFonts.poppins(
                                   fontSize: 20,
                                   color: Colors.grey.shade900,
                                   fontWeight: FontWeight.bold,
-
                                 ),
                               ),
-                               Text(
+                              Text(
                                 ' night',
                                 style: GoogleFonts.poppins(
                                   fontSize: 16,
                                   color: Colors.grey.shade700,
                                   fontWeight: FontWeight.w400,
-
                                 ),
                               ),
                             ],
